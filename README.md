@@ -1,8 +1,5 @@
-# ASP.NET Dotnet framework App > published into Container > deployed to AKS Windows node - connecting Azure Redis SSL endpoint 
-
-#Depending on the operating system of the host machines(s) that will build or run the containers, the image specified in the FROM statement may need to be changed.
-#For more information, please see https://aka.ms/containercompat 
-
+# ASP.NET App > published as Container > deployed to AKS Windows VM > connecting Azure Redis SSL endpoint  and writing logs to Blob storage - POC to check whether Redis SSL end point can be reached from .NET code running on 'aspnet:4.8-windowsservercore-ltsc2019' image. 
+================================================
 ```docker 
 FROM mcr.microsoft.com/dotnet/framework/aspnet:4.8-windowsservercore-ltsc2019
 ARG source
