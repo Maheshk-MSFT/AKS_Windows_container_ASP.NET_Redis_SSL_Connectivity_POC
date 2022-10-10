@@ -1,5 +1,6 @@
 # mikkyredis
 
+```yaml
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -40,3 +41,4 @@ spec:
     port: 80
   selector:
     app: sampleredis
+```
