@@ -57,6 +57,7 @@ spec:
   selector:
     app: sampleredis
 ```
+<img width="1144" alt="5" src="https://user-images.githubusercontent.com/61469290/194848070-074ee0af-510d-4ef0-af63-ccc1b8929299.png">
 
 <img width="463" alt="1" src="https://user-images.githubusercontent.com/61469290/194805844-5cf94de5-7ca6-4f44-ba01-9c0f4de60c9f.png">
 
