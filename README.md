@@ -10,10 +10,12 @@ COPY ${source:-obj/Docker/publish} .
 
 ```
 
+```bash 
 docker 
 docker login mikkyshoprepo.azurecr.io -u mikkyshoprepo -p something
 docker tag mikkyredis2 mikkyshoprepo.azurecr.io/mikkyredis2:latest
 docker push mikkyshoprepo.azurecr.io/mikkyredis2:latest
+```
 
 ```yaml
 apiVersion: apps/v1
