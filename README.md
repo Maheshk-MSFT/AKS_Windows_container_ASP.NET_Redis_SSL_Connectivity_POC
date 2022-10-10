@@ -60,3 +60,9 @@ spec:
   selector:
     app: sampleredis
 ```
+
+<img width="463" alt="1" src="https://user-images.githubusercontent.com/61469290/194805844-5cf94de5-7ca6-4f44-ba01-9c0f4de60c9f.png">
+
+<img width="738" alt="2" src="https://user-images.githubusercontent.com/61469290/194805850-b2d17b0a-ac3b-4f6d-b2b4-3e2534ce31fd.png">
+<img width="733" alt="3" src="https://user-images.githubusercontent.com/61469290/194805857-4eb74e18-2b15-4c64-a6ef-f48581ebbc1f.png">
+<img width="657" alt="4" src="https://user-images.githubusercontent.com/61469290/194805866-f394a8dd-2420-4f3e-b6e0-19d99664146e.png">
