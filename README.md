@@ -110,12 +110,10 @@ spec:
   - protocol: TCP
     port: 80
   selector:
-    app: sampleredis2022
-	
-```yaml
-
+    app: sampleredis2022	
+```
 
 ```bash
  kubectl get node akswsnine000000 -o json | jq '.metadata.labels'
  az aks nodepool add --resource-group mygroup-rg --cluster-name urikey --os-type Windows --os-sku Windows2022 --name npwin --node-count 1
-```bash
+```
