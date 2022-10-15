@@ -69,3 +69,53 @@ spec:
 <img width="895" alt="s" src="https://user-images.githubusercontent.com/61469290/196002594-b6a65b11-2484-41a3-89f8-743b2d21a4f2.png">
 <img width="1090" alt="s1" src="https://user-images.githubusercontent.com/61469290/196002596-0c1ba3f2-6649-42b7-acd1-375469c85159.png">
 <img width="1101" alt="s2" src="https://user-images.githubusercontent.com/61469290/196002598-4582fc8a-c0a1-4c90-a7a8-9b10fd59b39e.png">
+
+```yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sampleredis2022
+  labels:
+    app: sampleredis2022
+spec:
+  replicas: 1
+  template:
+    metadata:
+      name: sampleredis2022
+      labels:
+        app: sampleredis2022
+    spec:
+      nodeSelector:
+        "kubernetes.azure.com/os-sku": Windows2022
+      containers:
+      - name: sampleredis2022
+        image: mikkyshoprepo.azurecr.io/mikkyredis2:2022
+        resources:
+          limits:
+            cpu: 1
+            memory: 800M
+        ports:
+          - containerPort: 80
+  selector:
+    matchLabels:
+      app: sampleredis2022
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: sampleredis2022
+spec:
+  type: LoadBalancer
+  ports:
+  - protocol: TCP
+    port: 80
+  selector:
+    app: sampleredis2022
+	
+```yaml
+
+
+```bash
+ kubectl get node akswsnine000000 -o json | jq '.metadata.labels'
+ az aks nodepool add --resource-group mygroup-rg --cluster-name urikey --os-type Windows --os-sku Windows2022 --name npwin --node-count 1
+```bash
